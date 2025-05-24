@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>World Travel Guide | Photo Gallery</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1>World Travel Guide</h1>
+            <p>By Syril Serdeña | BSF-2B</p>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="destinations.html">Destinations</a></li>
+                <li><a href="tips.html">Travel Tips</a></li>
+                <li><a href="gallery.html" class="active">Gallery</a></li>
+                <li><a href="reflection.html">Reflection</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="container">
+        <h2>Travel Photo Gallery</h2>
+        <p class="gallery-intro">Explore stunning images from around the world to inspire your next adventure. Click on any image to view it larger and learn more about the location.</p>
+        
+        <div class="gallery-controls">
+            <button class="filter-btn active" data-filter="all">All</button>
+            <button class="filter-btn" data-filter="europe">Europe</button>
+            <button class="filter-btn" data-filter="asia">Asia</button>
+            <button class="filter-btn" data-filter="africa">Africa</button>
+            <button class="filter-btn" data-filter="americas">Americas</button>
+        </div>
+
+        <div class="photo-gallery">
+            <div class="photo-card" data-category="europe">
+                <img src="https://images.unsplash.com/photo-1502602898657-3e91760cbb34?ixlib=rb-1.2.1&auto=format&fit=crop&w=1000&q=80" alt="Paris, France">
+                <div class="photo-info">
+                    <h3>Eiffel Tower, Paris</h3>
+                    <p>The iconic symbol of France, especially beautiful at night when it sparkles.</p>
+                </div>
+            </div>
+            <div class="photo-card" data-category="asia">
+                <img src="https://images.unsplash.com/photo-1547981609-4b6bfe67ca0b?ixlib=rb-1.2.1&auto=format&fit=crop&w=1000&q=80" alt="Great Wall of China">
+                <div class="photo-info">
+                    <h3>Great Wall of China</h3>
+                    <p>Stretching over 13,000 miles, this ancient wonder snakes through mountains.</p>
+                </div>
+            </div>
+            <div class="photo-card" data-category="africa">
+                <img src="https://images.unsplash.com/photo-1516026672322-bc52d61a55d5?ixlib=rb-1.2.1&auto=format&fit=crop&w=1000&q=80" alt="Sahara Desert">
+                <div class="photo-info">
+                    <h3>Sahara Desert, Morocco</h3>
+                    <p>The world's largest hot desert with stunning dunes that change color with the light.</p>
+                </div>
+            </div>
+            <div class="photo-card" data-category="americas">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/3/31/Canyon_River_Tree_%28165872763%29.jpeg" alt="Grand Canyon">
+                <div class="photo-info">
+                    <h3>Grand Canyon, USA</h3>
+                    <p>A geological wonder carved by the Colorado River over millions of years.</p>
+                </div>
+            </div>
+            <div class="photo-card" data-category="europe">
+                <img src="https://images.unsplash.com/photo-1533929736458-ca588d08c8be?ixlib=rb-1.2.1&auto=format&fit=crop&w=1000&q=80" alt="Venice, Italy">
+                <div class="photo-info">
+                    <h3>Venice Canals, Italy</h3>
+                    <p>The romantic city built on water, famous for its gondolas and architecture.</p>
+                </div>
+            </div>
+            <div class="photo-card" data-category="asia">
+                <img src="https://images.unsplash.com/photo-1523482580672-f109ba8cb9be?ixlib=rb-1.2.1&auto=format&fit=crop&w=1000&q=80" alt="Taj Mahal">
+                <div class="photo-info">
+                    <h3>Taj Mahal, India</h3>
+                    <p>A stunning white marble mausoleum built as a symbol of love.</p>
+                </div>
+            </div>
+            <div class="photo-card" data-category="americas">
+                <img src="https://images.unsplash.com/photo-1516306580123-e6e52b1b7b5f?ixlib=rb-1.2.1&auto=format&fit=crop&w=1000&q=80" alt="Rio de Janeiro">
+                <div class="photo-info">
+                    <h3>Christ the Redeemer, Brazil</h3>
+                    <p>The iconic statue overlooking Rio de Janeiro from Corcovado mountain.</p>
+                </div>
+            </div>
+            <div class="photo-card" data-category="africa">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/f/f4/Cataratas_Victoria%2C_Zambia-Zimbabue%2C_2018-07-27%2C_DD_36-43_PAN.jpg" alt="Victoria Falls">
+                <div class="photo-info">
+                    <h3>Victoria Falls, Zambia/Zimbabwe</h3>
+                    <p>One of the world's largest waterfalls, known locally as "The Smoke That Thunders."</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="lightbox">
+            <span class="close-btn">&times;</span>
+            <img class="lightbox-content" id="lightbox-img">
+            <div class="lightbox-caption" id="lightbox-caption"></div>
+            <a class="prev">&#10094;</a>
+            <a class="next">&#10095;</a>
+        </div>
+
+        <section class="slideshow-section">
+            <h3>Featured Destinations Slideshow</h3>
+            <div class="slideshow-container">
+                <div class="mySlides fade">
+                    <img src="https://images.unsplash.com/photo-1464037866556-6812c9d1c72e?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80" style="width:100%">
+                    <div class="slide-caption">Santorini, Greece - Famous for its whitewashed buildings and blue domes</div>
+                </div>
+                <div class="mySlides fade">
+                    <img src="https://images.unsplash.com/photo-1520250497591-112f2f40a3f4?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80" style="width:100%">
+                    <div class="slide-caption">Bali, Indonesia - Known as the Island of the Gods with lush landscapes</div>
+                </div>
+                <div class="mySlides fade">
+                    <img src="https://images.unsplash.com/photo-1518391846015-55a9cc003b25?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80" style="width:100%">
+                    <div class="slide-caption">Machu Picchu, Peru - Ancient Inca city high in the Andes mountains</div>
+                </div>
+                <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+                <a class="next" onclick="plusSlides(1)">&#10095;</a>
+            </div>
+            <br>
+            <div style="text-align:center">
+                <span class="dot" onclick="currentSlide(1)"></span> 
+                <span class="dot" onclick="currentSlide(2)"></span> 
+                <span class="dot" onclick="currentSlide(3)"></span> 
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2025 World Travel Guide. All rights reserved.</p>
+            <div class="social-links">
+                <a href="https://www.facebook.com/syril.serdena.2025" target="_blank"><i class="fab fa-facebook"></i></a>
+                <a href="https://www.instagram.com/xox0sai/" target="_blank"><i class="fab fa-instagram"></i></a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
